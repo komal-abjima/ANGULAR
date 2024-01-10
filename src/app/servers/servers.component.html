@@ -1,0 +1,34 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+            <h3>Second Assignment</h3>
+<label for="">Server Name</label>
+<!-- event data binding -->
+<!-- <input type="text" class="form-control" (input)="onupdateServerName($event)"> -->
+<!-- two way data binding -->
+
+<input type="text" class="form-control" [(ngModel)] = "ServerName">
+<!-- <p>{{ServerName}} </p> -->
+
+<!-- string interpolation -->
+<div class="button">
+<button class="btn btn-primary" [disabled] = "!allowServer" (click) = onCreateServer()>Add button</button>
+</div>
+<!-- string interpolation -->
+<!-- <p>{{ allowServer}}</p> -->
+<!-- property binding -->
+<!-- <p [innerText] = "allowServer"></p> -->
+<!-- event binding -->
+<!-- <p>{{CreateServer}}</p> -->
+<p *ngIf = "MessageServer; else noserver">Server was created, server name is {{ServerName}}</p>
+<ng-template #noserver>
+    <p>'No server was created'</p>
+</ng-template>
+<div class="third">
+<app-server></app-server>
+<app-server *ngFor = "let server of Server"></app-server>
+</div>
+<thirdassignment></thirdassignment>
+</div>
+</div>
+</div>

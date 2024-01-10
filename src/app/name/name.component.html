@@ -1,0 +1,17 @@
+<div class="container">
+    <div class="row">
+        <div class="col-xs-12">
+
+            <h3>First Assignement</h3>
+
+            <label for="name">Name:</label>
+            <input type="text" class="form-control" [(ngModel)]="Name">
+            <p>{{Message}} </p>
+            <div class="button">
+                <button class="btn btn-success" [disabled]="!Name" (click)="onAddName()">Add Name</button>
+                <button class="btn btn-danger" style="margin: 8px 42px;" [disabled]="!Name"
+                    (click)="onReset()">Reset</button>
+            </div>
+        </div>
+    </div>
+</div>
