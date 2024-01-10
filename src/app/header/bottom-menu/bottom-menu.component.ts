@@ -6,5 +6,6 @@ import { Component } from '@angular/core';
   styleUrl: './bottom-menu.component.css'
 })
 export class BottomMenuComponent {
+  bottomMenuItem: string[] = ['Home', 'Products', 'About', 'Services', 'Contact Us']
 
 }

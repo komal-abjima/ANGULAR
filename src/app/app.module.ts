@@ -5,9 +5,11 @@ import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { BottomMenuComponent } from './header/bottom-menu/bottom-menu.component';
 import { TopMenuComponent } from './header/top-menu/top-menu.component';
-import { ProductListComponent } from './product-list/product-list.component';
 import { TopHeaderComponent } from './top-header/top-header.component';
-import { SearchComponent } from './product-list/search/search.component';
+import { FormsModule } from '@angular/forms';
+import { ContainerComponent } from './container/container.component';
+import { SearchComponent } from './container/search/search.component';
+import { ProductListComponent } from './container/product-list/product-list.component';
 
 @NgModule({
   declarations: [
@@ -15,12 +17,14 @@ import { SearchComponent } from './product-list/search/search.component';
     HeaderComponent,
     BottomMenuComponent,
     TopMenuComponent,
-    ProductListComponent,
+    ContainerComponent,
     TopHeaderComponent,
-    SearchComponent
+    SearchComponent,
+    ProductListComponent
   ],
   imports: [
-    BrowserModule
+    BrowserModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
