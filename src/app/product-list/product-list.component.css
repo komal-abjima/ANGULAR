@@ -1,0 +1,18 @@
+p, button{
+    margin-top: 0;
+    margin-bottom: 0rem;
+    margin-left: 17px;
+    
+}
+img{
+    width: 15%;
+    margin: 36px 17px;
+}
+.ekart--product--container{
+    padding: 10px 30px;
+}
+
+.cart{
+    padding: 5px 10px;
+    margin: 0px 17px;
+}
