@@ -156,6 +156,11 @@ export class ProductListComponent {
 
 
   
-  ]
+  ];
 
+  // @Input() custom property binding 
+  totalProductCount = this.products.length;
+  totalProductInStock = this.products.filter(p => p.is_in_Stock === true).length;
+  totalProductOutOfStock = this.products.filter(p => p.is_in_Stock === false).length;
+  
 }

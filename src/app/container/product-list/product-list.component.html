@@ -1,27 +1,7 @@
+<app-filter [all]="totalProductCount" [inStock] = "totalProductInStock" [outOfStock] = "totalProductOutOfStock"></app-filter>
 <div class="ekart--products--container">
-    <div class="ekart--product--item" *ngFor="let prod of products; let i = index">
-        <div class="ekart-wishlist-sale-container">
-            <div class="ekart--add--to--wishlist">
-                <i class="fa-solid fa-heart"></i>
-            </div>
-            <div class="ekart-on-sale-tag" *ngIf="prod.discountPrice">{{ (100 - (prod.discountPrice / prod.price * 100)).toFixed(0)}}% OFF
-               
-            </div>
-            </div>
-            <div >
-                <img [src]="prod.img_url" class="ekart--product--image" alt="">
-            </div>
-            <div class="ekart--add--to--price">
-                {{ prod.price}}
-            </div>
-            <div class="ekart--product--name">{{prod.name}}</div>
-            <div class="ekart--product--category">{{prod.brand}}</div>
-            <div class="ekart--product--color">{{prod.color.length}} Colors . Best Sellers</div>
-            <div class="ekart--product--in--stock" [ngStyle] = "{fontWeight:bold, color:prod.is_in_Stock ? 'Green' : 'Red' }"
-            >{{prod.is_in_Stock ? 'Available in Stock' : 'Not Available in Stock'}}</div>
-            
-
-        </div>
+    <!-- child component data  binding as [product] -->
+    <app-product *ngFor="let prod of products" [product] = "prod"></app-product>
 
  
 </div>
