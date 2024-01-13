@@ -8,4 +8,22 @@ import { Component } from '@angular/core';
 export class CompDataComponent {
   serverElements = [{type: 'server', name: 'Test a server', content: 'Just a Test!'}];
 
+
+  onServerAdded(serverData: {serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type: 'server',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+
+  }
+  onBlueprintAdded(serverData: {serverName: string, serverContent: string}){
+    this.serverElements.push({
+      type:'blueprint',
+      name: serverData.serverName,
+      content: serverData.serverContent
+    });
+  }
+
+
 }
