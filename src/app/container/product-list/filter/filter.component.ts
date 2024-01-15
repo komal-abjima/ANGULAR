@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, EventEmitter, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-filter',
@@ -14,5 +14,16 @@ export class FilterComponent {
 
   @Input()
   outOfStock:number = 0;
+
+  @Output()
+  selectedFilterRadioButtonChnaged: EventEmitter<string> = new EventEmitter<string>();
+
+  selectFilteredRadioButton: string = 'all';
+
+  onFilteredRadioButtonChanged(){
+    //console.log(this.selectFilteredRadioButton);
+    console.log("selectedFilterRadioButtonChnaged has raised")
+    this.selectedFilterRadioButtonChnaged.emit(this.selectFilteredRadioButton);
+  }
 
 }

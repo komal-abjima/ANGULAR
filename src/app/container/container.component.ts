@@ -9,6 +9,7 @@ export class ContainerComponent {
     // name = "John smith";
     addToCart:number = 0;
     message:string = '';
+    searchText: string = '';
     product = {
       name: "Redmi",
       price: 7000,
@@ -17,6 +18,11 @@ export class ContainerComponent {
       inStock: 10,
       pImage: '/assets/image/mobile.jpg'
   
+    }
+
+    setSearchText(value: string){
+      this.searchText = value;
+
     }
   
     getDiscountedPrice(){
