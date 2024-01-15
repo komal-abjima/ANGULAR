@@ -6,9 +6,10 @@ import { Component } from '@angular/core';
   styleUrl: './comp-data.component.css'
 })
 export class CompDataComponent {
+  // input() decorator
   serverElements = [{type: 'server', name: 'Test a server', content: 'Just a Test!'}];
 
-
+// Output() decorator
   onServerAdded(serverData: {serverName: string, serverContent: string}){
     this.serverElements.push({
       type: 'server',
