@@ -4,9 +4,8 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
 import { TableComponent } from './table/table.component';
-import { AddBtnComponent } from './table/add-btn/add-btn.component';
 import { FormsModule } from '@angular/forms';
-import { SearchPipe } from './table/search.pipe';
+import { SearchComponent } from './search/search.component';
 
 
 @NgModule({
@@ -14,8 +13,7 @@ import { SearchPipe } from './table/search.pipe';
     AppComponent,
     HeaderComponent,
     TableComponent,
-    AddBtnComponent,
-    SearchPipe
+    SearchComponent
 
   ],
   imports: [

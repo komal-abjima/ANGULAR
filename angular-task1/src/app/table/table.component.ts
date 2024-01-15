@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { Employee } from './employee.model';
 
 @Component({
@@ -10,7 +10,6 @@ export class TableComponent implements OnInit {
   id: number;
   name: string = '';
   department: string = '';
-  searchText = '';
   editMode: boolean = false;
   editEmployeeId: number;
 
@@ -43,6 +42,10 @@ export class TableComponent implements OnInit {
     this.editMode = !this.editMode;
     this.editEmployeeId = id;
   }
+
+  @Input()
+  searchText: string = '';
+
 
   constructor() { }
 
