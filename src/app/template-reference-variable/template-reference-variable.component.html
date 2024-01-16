@@ -1,0 +1,51 @@
+<!-- in this i am using template and reference variable for inserting a data into a form and showing into a table -->
+<div class="heading" style="background-color: lightsalmon;">
+<hr>
+<h3>TEMPLATE AND REFERENCE VARIABLE</h3>
+<hr>
+</div>
+<div class="container">
+    <div class="right">
+    
+        <div>
+          <label for=""><b>Name of the Book: </b></label>&nbsp;&nbsp;
+          <input type="text"  id="" placeholder="abc" #bookname>
+          <br>
+          <label for=""><b>Author Name:</b></label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="text"  id="" placeholder="mark paterson" #authorname>
+          <br>
+          <label for=""><b>Price:</b> </label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+          <input type="number" id="" placeholder="0.00" #price>
+          <br>
+
+          <button class="btn btn-success"(click)="addDetails(bookname.value, authorname.value,price.value); bookname.value=''; authorname.value='';price.value='' ">ADD DETAILS</button>
+          </div>       
+      
+      </div>
+      
+
+<div class="left">
+<table class="table">
+    <thead class="thead-dark">
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">NAME OF THE BOOK</th>
+        <th scope="col">AUTHOR NAME</th>
+        <th scope="col">PRICE</th>
+        
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let book of BookDetails; let i = index">
+        <th scope="row">{{book.id}}</th>
+        <td>{{book.name}}</td>
+        <td>{{book.authorname}}</td>
+        <td>{{book.price}}</td>
+        
+      </tr>
+    
+    </tbody>
+  </table>
+  </div>
+  </div>
+  

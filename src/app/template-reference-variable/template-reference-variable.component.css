@@ -1,0 +1,11 @@
+.container{
+    display: flex;
+    width: 100%;
+    /* justify-content: center; */
+}
+.right{
+    width: 50%;
+}
+.left{
+    width: 50%;
+}
