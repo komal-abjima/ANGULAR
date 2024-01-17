@@ -1,0 +1,13 @@
+nav{
+    background-color: #e87719;   
+}
+.navbar-header>a{
+    font-weight: bolder;
+    color: whitesmoke;
+    font-size: larger;
+}
+.right> a{
+    text-decoration: none;
+    color: whitesmoke;
+    font-weight: bolder ;
+}

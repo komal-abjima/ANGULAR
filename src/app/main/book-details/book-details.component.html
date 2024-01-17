@@ -1,0 +1,54 @@
+<!-- <div *ngIf="selectedBook" class="details-container">
+    <div class="details-header">
+        <img [src]="selectedBook.imgUrl" alt="">
+        <h2>{{selectedBook.name}}</h2>
+        <button (click)="closeDetails()">Close</button>
+    </div>
+    <div class="details-content">
+        <p><strong>Author:</strong>{{selectedBook.auth_name}}</p>
+        <p><strong>Price:</strong>{{selectedBook.price}}</p>
+        
+    </div>
+</div> -->
+
+<div *ngIf="selectedBook">
+<div class="book-details scroll" >
+    <div class="book-details-close" (click)="closeDetails()">
+        <i class="fa fa-times" aria-hidden="true"></i>
+    </div>
+   
+
+    <div class="book-image">
+        <img [src]="selectedBook.imgUrl">
+    </div>
+    
+    <div class="book-info">
+        <div class="book-name">
+            <h2>{{selectedBook.name}}</h2>
+            <p>by<span style="text-decoration: underline; color: blue;">{{selectedBook.auth_name}}</span></p>
+        </div>
+       
+        <div class="book-price">
+            <p>
+                <b> Offer Price:</b>
+                <span style="background-color: red; color:white"><s>&#8377;{{selectedBook.marketPP}}</s></span>
+                <span style="background-color: green; color:white">&#8377;{{selectedBook.price}}</span> (Inclusive of all taxes)
+            </p>
+        </div>
+
+
+        <div class="book-description">
+            <div style="padding: 5px 0px;border-bottom: #ccc 2px solid">
+                <h4>Book Description</h4>
+            </div>
+            <div style="margin-top: 20px">
+                <p>{{selectedBook.description}}</p>
+            </div>                
+        </div>
+    </div>
+    <div class="book-addtocart">
+        <button class="btn-add-to-cart">ADD TO CART</button>
+    </div>
+</div>
+<div class="overlay"></div>
+</div>

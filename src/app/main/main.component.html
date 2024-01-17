@@ -1,0 +1,4 @@
+<div class="card-container">
+<app-book-card *ngFor="let book of books" [book]=" book" (bookClicked) = "onBookClick($event)"></app-book-card>
+</div>
+<app-book-details></app-book-details>
