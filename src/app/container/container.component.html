@@ -18,5 +18,6 @@
     <button class="cart" (click) = "incrementCartValue()">+</button>
     <p>{{message}} </p> -->
     <app-search (searchTextChanged)="setSearchText($event)"></app-search>
-    <product-list [searchText]="searchText"></product-list>
+    <product-list [searchText]="searchText" #productListComponent></product-list>
+    <app-product-detail *ngIf="productListComponent.selectedProduct"></app-product-detail>
 </div>
