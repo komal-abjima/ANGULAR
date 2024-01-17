@@ -1,5 +1,5 @@
 <div class="card" (click)="onBookClick()">
-    <img *ngIf = "book.imgUrl" [src]="book.imgUrl" alt="book.name" class="card-img-top">
+    <img [src]="book.imgUrl" alt="book.name" class="card-img-top">
     <div class="card-body">
         <h5 class="card-title">{{book.name}}</h5>
         <p class="card-text">{{book.auth_name}}</p>

@@ -1,16 +1,3 @@
-<!-- <div *ngIf="selectedBook" class="details-container">
-    <div class="details-header">
-        <img [src]="selectedBook.imgUrl" alt="">
-        <h2>{{selectedBook.name}}</h2>
-        <button (click)="closeDetails()">Close</button>
-    </div>
-    <div class="details-content">
-        <p><strong>Author:</strong>{{selectedBook.auth_name}}</p>
-        <p><strong>Price:</strong>{{selectedBook.price}}</p>
-        
-    </div>
-</div> -->
-
 <div *ngIf="selectedBook">
 <div class="book-details scroll" >
     <div class="book-details-close" (click)="closeDetails()">
