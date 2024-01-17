@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Bootstrap Example</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
+</head>
+<body>
+
+<div class="container">
+  <div class="left">
+  <h2>REGISTRATION FORM</h2>
+    <div>
+      <label for="">First Name:</label>
+      <input type="text" class="form-control" #inputEl>
+    </div>
+    <div>
+      <label for="">Last Name:</label>
+      <input type="text" class="form-control" #inputEl>
+    </div>
+    <div>
+      <label for="">Age</label>
+      <input type="number" class="form-control" #inputEl>
+    </div>
+    <div class="button">
+    <button type="submit" class="btn btn-primary" style="width: 100%;" (click)="submit()">Submit</button>
+    </div>
+
+    </div>
+
+
+
+
+    <p *ngIf="fullname">{{fullname}}, You have successfully registered..!</p>
+
+ 
+</div>
+
+</body>
+</html>

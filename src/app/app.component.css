@@ -1,0 +1,27 @@
+.container{
+   display: flex;
+   margin-top: 10%;
+    width: 100%;
+    justify-content: space-around;
+    height: 50vh;
+   
+}
+h2{
+    text-align: center;
+    text-decoration: underline;
+}
+
+
+.button{
+   text-align: center;
+    margin-top: 50px;
+   
+}
+.right
+{
+    width: 50%;
+}
+.left{
+    width: 40%;
+}
+
