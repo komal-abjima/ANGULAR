@@ -19,5 +19,5 @@
     <p>{{message}} </p> -->
     <app-search (searchTextChanged)="setSearchText($event)"></app-search>
     <product-list [searchText]="searchText" #productListComponent></product-list>
-    <app-product-detail *ngIf="productListComponent.selectedProduct"></app-product-detail>
+    <app-product-detail *ngIf="productListComponent.selectedProduct" [productListComp]="productListComponent"></app-product-detail>
 </div>
