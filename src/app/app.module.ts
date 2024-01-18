@@ -8,6 +8,7 @@ import { FormsModule } from '@angular/forms';
 import { GameControlComponent } from './assignment-4/game-control/game-control.component';
 import { OddComponent } from './assignment-4/odd/odd.component';
 import { EvenComponent } from './assignment-4/even/even.component';
+import { Pract1Component } from './Directive/pract1/pract1.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { EvenComponent } from './assignment-4/even/even.component';
     ServerElementComponent,
     GameControlComponent,
     OddComponent,
-    EvenComponent
+    EvenComponent,
+    Pract1Component
   ],
   imports: [
     BrowserModule,
