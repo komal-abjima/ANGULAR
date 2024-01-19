@@ -11,4 +11,6 @@ export class Pract1Component {
   evenNumbers = [2,4];
   onlyOdd = false;
 
+  value = 20;
+
 }
