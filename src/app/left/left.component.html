@@ -1,0 +1,31 @@
+<div class="container">
+    <div class="left"> 
+
+        <!-- add contact -->
+        <div class="addContact">
+            <p>Add Contact
+                <i class="fa-solid fa-plus"(click)="toggleAddContact()" style="margin-left: 135px;"> </i>
+            <ng-container *ngIf="showAddContactInput"><input type="text" placeholder="New contact name" [(ngModel)]="newContactName">
+               <i class="fa fa-check" aria-hidden="true" (click)="addContact()" style="cursor: pointer;"></i>
+            </ng-container>
+            </p>
+        </div>
+        
+        <!-- search bar -->
+   
+        <input type="text" placeholder="Search contacts" [(ngModel)]="searchText" style="width: 100%; height: 2.5em;">
+        <ul>
+          <div class="personList">
+        <li *ngFor="let contact of searchContacts()" (click)="onContactSelected(contact.name)" [ngClass]="{'selected': selectedContact === contact.name}">
+        {{ contact.name }}
+            </li>
+          </div>
+        </ul>
+    </div>
+
+    <!-- chat message -->
+    <div class="right">
+         <app-chat [selectedContact]="selectedContact" (sendMessage)="receiveUserMessage($event)"></app-chat>
+    </div>
+
+</div> 

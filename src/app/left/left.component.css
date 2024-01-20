@@ -1,0 +1,49 @@
+.container{
+    margin-top: 5%;
+    margin-left: 10%;
+    width: 100%;
+    height: 80vh;
+    border: 2px solid black;
+    display: flex;
+    justify-content: space-around;
+    background: black;
+}
+
+.left{
+    border: 2px solid black;
+    width: 30%;
+    margin: 19px 15px;
+    background: #075e54;
+}
+
+.right{
+    border: 2px solid black;
+    width: 100%;
+    border-radius: 20px;
+    margin: 18px 0px;
+}
+p{
+    margin-left: 20px;
+    color: aliceblue;
+}
+.personList{
+    margin-right: 19px;
+    margin-top: 9px;
+}
+ul{
+    padding: 0;
+}
+li{
+    
+   width: 107.5%;
+    list-style: none;
+    cursor: pointer;
+    border-bottom: 1px solid gray;
+    color: aliceblue;
+    height: 3em;
+
+}
+.personList li.selected {
+    background-color: 	#128c7e; 
+   
+  }

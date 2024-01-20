@@ -1,0 +1,49 @@
+.container{
+  background: url('https://w0.peakpx.com/wallpaper/818/148/HD-wallpaper-whatsapp-background-cool-dark-green-new-theme-whatsapp.jpg');
+  background-size: cover;
+  height: 65vh;
+} 
+.top {
+    border: 2px solid black;
+    margin-top: 10px;
+    margin-left: -15px; 
+    width: 104%;
+    background-color: black;
+    color: white;
+    border-top: 1px solid gray;
+  }
+   
+  p {
+    margin-left: 30px;
+    margin-top: 8px;
+    font-size: 18px;
+  }
+   
+  .bottom {
+    position: fixed;
+    margin-top: 26.5em;
+    left: 0;
+    width: 75%;
+    align-items: center;
+    padding: 5px;
+    margin-left: 490px;
+  }
+
+  .mid {
+    height: 50vh;
+    overflow-y: auto;
+    width: 30%;
+    margin-right: 50px;
+    float: right;
+    border-radius: 2px;
+    display: flex;
+    flex-direction: column-reverse; 
+    max-height: 100%; 
+  }
+   
+  .single-message {
+    background-color: #e5e5e5;
+    padding: 5px;
+    border-radius: 5px;
+    margin-bottom: 5px;
+  }
