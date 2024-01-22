@@ -7,17 +7,19 @@ import { ChatComponent } from './chat/chat.component';
   styleUrls: ['./left.component.css'],
 })
 export class LeftComponent {
+  selectedContact: string;
+  newContactName: string = '';
+  searchText: string = '';
+  showAddContactInput: boolean = false;
+
   @ViewChild(ChatComponent) chatComponent: ChatComponent;
+
   contacts: any[] = [
     { name: 'Person 1', messages: [] },
     { name: 'Person 2', messages: [] },
     { name: 'Person 3', messages: [] }
 
   ];
-  selectedContact: string;
-  newContactName: string = '';
-  searchText: string = '';
-  showAddContactInput: boolean = false;
 
   ngOnInit(): void {
     this.selectedContact = this.contacts[0].name;
@@ -28,30 +30,29 @@ export class LeftComponent {
     this.selectedContact = contact;
     this.loadMessages();
   }
-
   receiveUserMessage(message: string): void {
     const selectedContactObj = this.contacts.find((c) => c.name === this.selectedContact);
     if (selectedContactObj) {
-      selectedContactObj.messages.unshift({ sender: 'You', text: message });
+      selectedContactObj.messages.unshift({ text: message });
       this.saveMessages(selectedContactObj);
     }
 
-
     if (this.chatComponent) {
-      this.chatComponent.updateMessages(selectedContactObj.messages);
+      this.chatComponent.updateMessages(selectedContactObj.messages, this.selectedContact);
     }
   }
 
-  private loadMessages(): void {
+  loadMessages(): void {
     const selectedContactObj = this.contacts.find((c) => c.name === this.selectedContact);
     if (selectedContactObj) {
-
-      this.chatComponent.updateMessages(selectedContactObj.messages);
+      const storedMessages = sessionStorage.getItem(this.selectedContact);
+      selectedContactObj.messages = storedMessages ? JSON.parse(storedMessages) : [];
+      this.chatComponent.updateMessages(selectedContactObj.messages, this.selectedContact);
     }
   }
 
-  private saveMessages(contact: any): void {
-    this.chatComponent.allMessages[contact.name] = contact.messages;
+  saveMessages(contact: any): void {
+    sessionStorage.setItem(contact.name, JSON.stringify(contact.messages));
   }
 
   addContact(): void {

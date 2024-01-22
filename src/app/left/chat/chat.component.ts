@@ -18,9 +18,10 @@ export class ChatComponent {
       this.newMessage = '';
     }
   }
- 
-  updateMessages(newMessages: any[]): void {
-    this.allMessages[this.selectedContact] = newMessages;
-    this.messages = this.allMessages[this.selectedContact] || [];
+  
+  updateMessages(newMessages: any[], contactName: string): void {
+    this.allMessages[contactName] = newMessages;
+    this.messages = this.allMessages[contactName] || [];
+    sessionStorage.setItem(contactName, JSON.stringify(this.messages));
   }
 }
