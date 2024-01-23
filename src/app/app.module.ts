@@ -7,13 +7,19 @@ import { NewAccountComponent } from './new-account/new-account.component';
 import { AccountService } from './account.service';
 import { LoggingService } from './logging.service';
 import { FormsModule } from '@angular/forms';
+import { ActiveUsersComponent } from './active-users/active-users.component';
+import { InactiveUsersComponent } from './inactive-users/inactive-users.component';
+import { UserService } from './users.service';
+import { CounterService } from './counter.service';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     AccountComponent,
-    NewAccountComponent
+    NewAccountComponent,
+    ActiveUsersComponent,
+    InactiveUsersComponent
 
   ],
   imports: [
@@ -21,7 +27,7 @@ import { FormsModule } from '@angular/forms';
     FormsModule
   ],
  
-  providers: [AccountService, LoggingService],
+  providers: [AccountService, LoggingService, CounterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
